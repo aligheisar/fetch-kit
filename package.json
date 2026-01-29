@@ -30,6 +30,14 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./c-fetch": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./v-fetch": {
+      "import": "./dist/v-fetch.js",
+      "require": "./dist/v-fetch.cjs"
     }
   },
   "files": [
@@ -53,6 +61,15 @@
     "lint-staged": "^16.2.7",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@aligheisar/http-utils": ">=0.1.0",
+    "valibot": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "valibot": {
+      "optional": true
+    }
   },
   "packageManager": "pnpm@10.24.0"
 }

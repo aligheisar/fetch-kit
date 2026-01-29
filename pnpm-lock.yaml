@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@aligheisar/http-utils':
+        specifier: '>=0.1.0'
+        version: 0.1.0
+      valibot:
+        specifier: '>=1.0.0'
+        version: 1.2.0(typescript@5.9.3)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.3.13
@@ -25,6 +32,9 @@ importers:
         version: 5.9.3
 
 packages:
+
+  '@aligheisar/http-utils@0.1.0':
+    resolution: {integrity: sha512-BEYwNTJxa0OMQfXcSDibRi6q1koWk1Sa1mx/CDUl+WXIxBEA4vjzhd0tj0U+0VYM1zOjDAD6guhlSQdaSWyX5g==}
 
   '@biomejs/biome@2.3.13':
     resolution: {integrity: sha512-Fw7UsV0UAtWIBIm0M7g5CRerpu1eKyKAXIazzxhbXYUyMkwNrkX/KLkGI7b+uVDQ5cLUMfOC9vR60q9IDYDstA==}
@@ -273,6 +283,11 @@ packages:
     cpu: [arm64]
     os: [freebsd]
 
+  '@rollup/rollup-freebsd-x64@4.57.0':
+    resolution: {integrity: sha512-1j3stGx+qbhXql4OCDZhnK7b01s6rBKNybfsX+TNrEe9JNq4DLi1yGiR1xW+nL+FNVvI4D02PUnl6gJ/2y6WJA==}
+    cpu: [x64]
+    os: [freebsd]
+
   '@rollup/rollup-linux-arm-gnueabihf@4.57.0':
     resolution: {integrity: sha512-eyrr5W08Ms9uM0mLcKfM/Uzx7hjhz2bcjv8P2uynfj0yU8GGPdz8iYrBPhiLOZqahoAMB8ZiolRZPbbU2MAi6Q==}
     cpu: [arm]
@@ -281,6 +296,11 @@ packages:
   '@rollup/rollup-linux-arm-musleabihf@4.57.0':
     resolution: {integrity: sha512-Xds90ITXJCNyX9pDhqf85MKWUI4lqjiPAipJ8OLp8xqI2Ehk+TCVhF9rvOoN8xTbcafow3QOThkNnrM33uCFQA==}
     cpu: [arm]
+    os: [linux]
+
+  '@rollup/rollup-linux-arm64-gnu@4.57.0':
+    resolution: {integrity: sha512-Xws2KA4CLvZmXjy46SQaXSejuKPhwVdaNinldoYfqruZBaJHqVo6hnRa8SDo9z7PBW5x84SH64+izmldCgbezw==}
+    cpu: [arm64]
     os: [linux]
 
   '@rollup/rollup-linux-arm64-musl@4.57.0':
@@ -316,6 +336,11 @@ packages:
   '@rollup/rollup-linux-riscv64-musl@4.57.0':
     resolution: {integrity: sha512-/MU7/HizQGsnBREtRpcSbSV1zfkoxSTR7wLsRmBPQ8FwUj5sykrP1MyJTvsxP5KBq9SyE6kH8UQQQwa0ASeoQQ==}
     cpu: [riscv64]
+    os: [linux]
+
+  '@rollup/rollup-linux-s390x-gnu@4.57.0':
+    resolution: {integrity: sha512-Q9eh+gUGILIHEaJf66aF6a414jQbDnn29zeu0eX3dHMuysnhTvsUvZTCAyZ6tJhUjnvzBKE4FtuaYxutxRZpOg==}
+    cpu: [s390x]
     os: [linux]
 
   '@rollup/rollup-linux-x64-gnu@4.57.0':
@@ -696,6 +721,14 @@ packages:
   ufo@1.6.3:
     resolution: {integrity: sha512-yDJTmhydvl5lJzBmy/hyOAA0d+aqCBuwl818haVdYCRrWV84o7YyeVm4QlVHStqNrrJSTb6jKuFAVqAFsr+K3Q==}
 
+  valibot@1.2.0:
+    resolution: {integrity: sha512-mm1rxUsmOxzrwnX5arGS+U4T25RdvpPjPN4yR0u9pUBov9+zGVtO84tif1eY4r6zWxVxu3KzIyknJy3rxfRZZg==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   wrap-ansi@9.0.2:
     resolution: {integrity: sha512-42AtmgqjV+X1VpdOfyTGOYRi0/zsoLqtXQckTmqTeybT+BDIbM/Guxo7x3pE2vtpr1ok6xRqM9OpBe+Jyoqyww==}
     engines: {node: '>=18'}
@@ -706,6 +739,8 @@ packages:
     hasBin: true
 
 snapshots:
+
+  '@aligheisar/http-utils@0.1.0': {}
 
   '@biomejs/biome@2.3.13':
     optionalDependencies:
@@ -849,10 +884,16 @@ snapshots:
   '@rollup/rollup-freebsd-arm64@4.57.0':
     optional: true
 
+  '@rollup/rollup-freebsd-x64@4.57.0':
+    optional: true
+
   '@rollup/rollup-linux-arm-gnueabihf@4.57.0':
     optional: true
 
   '@rollup/rollup-linux-arm-musleabihf@4.57.0':
+    optional: true
+
+  '@rollup/rollup-linux-arm64-gnu@4.57.0':
     optional: true
 
   '@rollup/rollup-linux-arm64-musl@4.57.0':
@@ -874,6 +915,9 @@ snapshots:
     optional: true
 
   '@rollup/rollup-linux-riscv64-musl@4.57.0':
+    optional: true
+
+  '@rollup/rollup-linux-s390x-gnu@4.57.0':
     optional: true
 
   '@rollup/rollup-linux-x64-gnu@4.57.0':
@@ -1127,8 +1171,10 @@ snapshots:
       '@rollup/rollup-darwin-arm64': 4.57.0
       '@rollup/rollup-darwin-x64': 4.57.0
       '@rollup/rollup-freebsd-arm64': 4.57.0
+      '@rollup/rollup-freebsd-x64': 4.57.0
       '@rollup/rollup-linux-arm-gnueabihf': 4.57.0
       '@rollup/rollup-linux-arm-musleabihf': 4.57.0
+      '@rollup/rollup-linux-arm64-gnu': 4.57.0
       '@rollup/rollup-linux-arm64-musl': 4.57.0
       '@rollup/rollup-linux-loong64-gnu': 4.57.0
       '@rollup/rollup-linux-loong64-musl': 4.57.0
@@ -1136,6 +1182,7 @@ snapshots:
       '@rollup/rollup-linux-ppc64-musl': 4.57.0
       '@rollup/rollup-linux-riscv64-gnu': 4.57.0
       '@rollup/rollup-linux-riscv64-musl': 4.57.0
+      '@rollup/rollup-linux-s390x-gnu': 4.57.0
       '@rollup/rollup-linux-x64-gnu': 4.57.0
       '@rollup/rollup-linux-x64-musl': 4.57.0
       '@rollup/rollup-openbsd-x64': 4.57.0
@@ -1235,6 +1282,10 @@ snapshots:
   typescript@5.9.3: {}
 
   ufo@1.6.3: {}
+
+  valibot@1.2.0(typescript@5.9.3):
+    optionalDependencies:
+      typescript: 5.9.3
 
   wrap-ansi@9.0.2:
     dependencies:
