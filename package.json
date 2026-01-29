@@ -1,7 +1,7 @@
 {
   "name": "@aligheisar/fetch-kit",
   "version": "0.1.0",
-  "description": "A lightweight TypeScript utility to handle async Promises with typed try/catch results.",
+  "description": "A type-safe Fetch API wrapper with optional runtime validation.",
   "author": {
     "email": "ali.gheisar.dev@gmail.com",
     "name": "Ali Gheisar",
